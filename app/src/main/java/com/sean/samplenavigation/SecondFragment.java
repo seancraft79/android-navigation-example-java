@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +44,10 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                // SecondFragment 에서 MainFragment 로 데이터 전달 (Bundle)
+                Bundle bundle = new Bundle();
+                bundle.putString("varback", "Hello Back !!!");
+                Navigation.findNavController(view).navigate(R.id.action_secondFragment_to_mainFragment, bundle);
             }
         });
     }

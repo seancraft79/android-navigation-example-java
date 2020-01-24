@@ -25,5 +25,8 @@
         <argument
             android:name="var"
             app:argType="string" />
+        <action
+            android:id="@+id/action_secondFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 </navigation>
